@@ -4,11 +4,13 @@ var dcoControllers = angular.module('dcoControllers', []);
 
 dcoControllers.controller('mainController', ['$scope',
     function($scope) {
-        $scope.names = ['Matthew'];
+        $scope.intro = 'I am the model of a modern, major general.';
 
-        $scope.add = function() {
-            $scope.names.push($scope.name);
-            $scope.name = '';
-        };
+        $scope.people = [
+            'Sam',
+            'Pat',
+            'Andy',
+            'Kit',
+        ];
     }
 ]);

@@ -15,6 +15,7 @@
     <link href="css/dco.css" rel="stylesheet" media="screen" />
 
     <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
   </head>
@@ -23,17 +24,7 @@
 
     <header></header>
 
-    <section>
-      <section class="main" ng-controller="mainController">
-        <input type="text" ng-model="name" />
-        <button ng-click="add()">Add</button>
-
-        Hello, <strong ng-bind="name"></strong>
-
-        <ul>
-          <li ng-repeat="name in names">{{ name }}</li>
-        </ul>
-      </section>
+    <section class="main-wrapper" ng-view></section>
     </section>
 
     <footer></footer>
