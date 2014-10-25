@@ -2,7 +2,9 @@
 
 var dcoApp = angular.module('dco', [
     'ngRoute',
+    'ngResource',
     'dcoControllers',
+    'dcoServices',
 ]);
 
 dcoApp.config(['$routeProvider', '$locationProvider',
@@ -14,6 +16,14 @@ dcoApp.config(['$routeProvider', '$locationProvider',
             when('/', {
                 templateUrl: 'partials/home.html',
                 controller: 'mainController'
+            }).
+            when('/people', {
+                templateUrl: 'partials/people.html',
+                controller: 'peopleController'
+            }).
+            when('/people/:person', {
+                templateUrl: 'partials/person.html',
+                controller: 'personController'
             }).
             otherwise({
                 redirectTo: '/'

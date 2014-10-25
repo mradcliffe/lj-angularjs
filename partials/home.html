@@ -1,12 +1,14 @@
-<section class="main">
+<section class="main col-lg-9 col-sm-12 col-md-8 col-xs-12">
   {{intro}}
 </section>
 
-<aside class="sidebar">
+<aside class="sidebar col-lg-3 col-md-4 col-sm-12 col-xs-12">
   <nav>
-    <ul>
-      <li ng-repeat="name in people">
-        <strong>{{name}}</strong>
+    <ul class="nav nav-pills nav-stacked">
+      <h2>Navigation</h2>
+      <li>
+        <a href="#!/" title="Home">Home</a>
+        <a href="#!/people" title="People">People</a>
       </li>
     </ul>
   </nav>
