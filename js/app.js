@@ -3,6 +3,7 @@
 var dcoApp = angular.module('dco', [
     'ngRoute',
     'ngResource',
+    'ngSanitize',
     'dcoControllers',
     'dcoServices',
 ]);

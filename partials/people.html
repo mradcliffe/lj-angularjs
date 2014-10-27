@@ -3,7 +3,7 @@
     <h2>People</h2>
     <ul class="nav nav-stacked nav-pills">
       <li ng-repeat="person in people">
-        <a href="#!/people/{{person.name}}" title="{{person.label}}">{{person.label}}</a>
+        <a href="#!/people/{{person.name[0].value}}" title="{{person.field_firstname[0].value}}">{{person.field_firstname[0].value}}</a>
       </li>
     </ul>
   </nav>

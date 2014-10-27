@@ -1,9 +1,9 @@
 <section class="main col-xs-12 col-sm-12 col-md-8 col-lg-9">
 
   <article class="person">
-    <h2>{{person.firstName}} {{person.lastName}}</h2>
+    <h2>{{person.field_firstname[0].value}} {{person.field_lastname[0].value}}</h2>
 
-    <div ng-bind="person.bio"></div>
+    <div ng-bind-html="person.field_bio[0].value"></div>
   </article>
 
 </section>
@@ -11,13 +11,12 @@
 <aside class="sidebar col-xs-12 col-sm-12 col-md-4 col-lg-3">
   <div class="avatar-wrapper">
     <picture class="avatar">
-      <source src="{{person.avatar}}" />
-      <img src="css/images/anon.png" alt="{{person.firstName}} {{person.lastName}}'s avatar" />
+      <img ng-src="{{avatar.uri}}" alt="{{person.field_firstname[0].value}} {{person.field_lastname[0].value}}'s avatar" />
     </picture>
   </div>
 
   <ul class="interests">
     <h3>Interests</h3>
-    <li class="badge" ng-repeat="interest in person.interests">{{interest}}</li>
+    <li class="badge" ng-repeat="interest in interests">{{interest}}</li>
   </ul>
 </aside>
