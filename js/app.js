@@ -6,6 +6,7 @@ var dcoApp = angular.module('dco', [
     'ngSanitize',
     'dcoControllers',
     'dcoServices',
+    'dcoFilters',
 ]);
 
 dcoApp.config(['$routeProvider', '$locationProvider',
@@ -25,6 +26,10 @@ dcoApp.config(['$routeProvider', '$locationProvider',
             when('/people/:person', {
                 templateUrl: 'partials/person.html',
                 controller: 'personController'
+            }).
+            when('/friends', {
+                templateUrl: 'partials/friends.html',
+                controller: 'friendController'
             }).
             otherwise({
                 redirectTo: '/'

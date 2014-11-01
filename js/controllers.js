@@ -39,3 +39,18 @@ dcoControllers.controller('personController', ['$scope', '$routeParams', 'Person
         });
     }
 ]);
+
+dcoControllers.controller('friendController', ['$scope',
+    function($scope) {
+        $scope.friends = [{name: 'Matthew'},{name: 'Matt'},{name: 'Radcliffe'}];
+        $scope.newfriend = {
+            name: null
+        };
+
+        $scope.addFriend = function() {
+            $scope.friends.push({
+                name: $scope.newfriend.name
+            });
+        };
+    }
+]);

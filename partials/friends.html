@@ -1,0 +1,25 @@
+<section class="main col-xs-12 col-sm-12 col-md-8 col-lg-9">
+  <form class="row" name="friendForm">
+    <label of="friend-name">Name:</label>
+    <input id="friend-name" name="friendName" ng-model="newfriend.name" />
+    <button class="btn-primary" ng-click="addFriend()">Add Friend</button>
+  </div>
+  <table class="friends row table table-striped table-bordered">
+    <thead>
+      <tr><th>Name</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="friend in friends | search:search">
+        <td>{{friend.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<aside class="sidebar col-xs-12 col-sm-12 col-md-4 col-lg-3">
+  <h2>Filter</h2>
+  <form name="search">
+    <label of="search-name">Name begins with:</label>
+    <input id="search-name" name="searchName" ng-model="search.name" />
+  </form>
+</aside>

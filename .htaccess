@@ -3,6 +3,7 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Path to your app directory.
   RewriteBase /angular/
 
   RewriteCond %{REQUEST_FILENAME} !-f
